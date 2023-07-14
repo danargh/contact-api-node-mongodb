@@ -1,0 +1,20 @@
+{
+   "openapi": "3.0.0",
+   "info": {
+      "title": "contact API",
+      "description": "API",
+      "version": "1.0.0"
+   },
+   "servers": [
+      {
+         "url": "http://localhost:3000",
+         "description": "Local server"
+      }
+   ],
+   "tags": [
+      {
+         "name": "contact",
+         "description": "API for contact in the system"
+      }
+   ]
+}
