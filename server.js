@@ -28,8 +28,6 @@ app.use(
 
 // routes
 
-// prisma
-
 // running server
 app.listen(4000, () => {
    console.log("Server is running on http://localhost:4000");

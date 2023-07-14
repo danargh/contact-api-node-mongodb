@@ -15,4 +15,4 @@ const validate = (schema, request) => {
    }
 };
 
-export { validate };
+export { validate, registerUserValidation };
