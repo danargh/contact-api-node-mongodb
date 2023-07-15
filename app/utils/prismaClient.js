@@ -38,38 +38,38 @@ prisma.$on("query", (e) => {
    logger.info(e);
 });
 
-async function main() {
-   await prisma.user.create({
-      data: {
-         username: "Falal",
-         email: "falal@gmail.com",
-         password: "12345",
-         token: "1234567890",
-         contacts: {
-            create: {
-               firstName: "Falal",
-               lastName: "Maulana",
-               phone: "081234567890",
-            },
-         },
-      },
-   });
+// async function main() {
+//    await prisma.user.create({
+//       data: {
+//          username: "Falal",
+//          email: "falal@gmail.com",
+//          password: "12345",
+//          token: "1234567890",
+//          contacts: {
+//             create: {
+//                firstName: "Falal",
+//                lastName: "Maulana",
+//                phone: "081234567890",
+//             },
+//          },
+//       },
+//    });
 
-   const allUsers = await prisma.user.findMany();
-   console.dir(allUsers, { depth: null });
-}
+//    const allUsers = await prisma.user.findMany();
+//    console.dir(allUsers, { depth: null });
+// }
 
-main()
-   .then(async () => {
-      await prisma.$disconnect();
-   })
+// main()
+//    .then(async () => {
+//       await prisma.$disconnect();
+//    })
 
-   .catch(async (e) => {
-      console.error(e);
+//    .catch(async (e) => {
+//       console.error(e);
 
-      await prisma.$disconnect();
+//       await prisma.$disconnect();
 
-      process.exit(1);
-   });
+//       process.exit(1);
+//    });
 
 export { prisma };

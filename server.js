@@ -3,6 +3,12 @@ import express from "express";
 import cors from "cors";
 import { publicRouter } from "./app/routes/public-api.js";
 const app = express();
+import dotenv from "dotenv";
+dotenv.config();
+
+// constants
+const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || "localhost";
 
 // regular middleware
 app.use(express.json());
@@ -28,9 +34,14 @@ app.use(
 // auth middleware
 
 // routes
-app.use(publicRouter);
+// app.use(publicRouter);
+
+// route / console hello world
+app.get("/", (req, res) => {
+   res.send("Hello World");
+});
 
 // running server
-app.listen(4000, () => {
-   console.log("Server is running on http://localhost:4000");
+app.listen(PORT, HOST, () => {
+   console.log(`Running on http://${HOST}:${PORT}`);
 });

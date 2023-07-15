@@ -1,10 +1,9 @@
-import { validate } from "../middleware/validate.js";
-import { registerUserValidation } from "../middleware/validation.js";
+import { validate, registerUserValidation } from "../middleware/validation.js";
 import { prisma } from "../utils/prismaClient.js";
-import { ResponseError } from "../utils/responseError.js";
+import { ResponseError } from "../error/response-error.js";
 import bycript from "bcrypt";
 
-const register = async (request) => {
+const registerService = async (request) => {
    const user = validate(registerUserValidation, request);
 
    const countUser = await prisma.user.count({
@@ -33,4 +32,4 @@ const register = async (request) => {
    return result;
 };
 
-export { register };
+export { registerService };
