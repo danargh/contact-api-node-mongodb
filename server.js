@@ -1,6 +1,7 @@
 import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
+import { publicRouter } from "./app/routes/public-api.js";
 const app = express();
 
 // regular middleware
@@ -27,6 +28,7 @@ app.use(
 // auth middleware
 
 // routes
+app.use(publicRouter);
 
 // running server
 app.listen(4000, () => {
