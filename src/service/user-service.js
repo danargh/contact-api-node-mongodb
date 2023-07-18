@@ -1,5 +1,5 @@
-import { validate, registerUserValidation } from "../middleware/validation.js";
-import { prisma } from "../utils/prismaClient.js";
+import { validate, registerUserValidation } from "../validation/validation.js";
+import { prisma } from "../lib/database.js";
 import { ResponseError } from "../error/response-error.js";
 import bycript from "bcrypt";
 
