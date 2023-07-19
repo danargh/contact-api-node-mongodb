@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+
 echo "Deploying application ..."
 
 echo "Update codebase..."
