@@ -24,7 +24,7 @@ jobs:
          FOLDER_NAME: /home/learning/app/contact-api-node-mongodb
       steps:
          - uses: actions/checkout@v3
-         - name: PPreparing to deploy to production 🚀🤘
+         - name: Preparing to deploy to production 🚀🤘
            uses: appleboy/ssh-action@master
            with:
               host: ${{ secrets.HOST }}
