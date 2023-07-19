@@ -1,4 +1,5 @@
 import Joi from "joi";
+import { ResponseError } from "../error/response-error.js";
 
 const registerUserValidation = Joi.object({
    username: Joi.string().max(100).required(),
@@ -10,7 +11,7 @@ const registerUserValidation = Joi.object({
 const validate = (schema, request) => {
    const result = schema.validate(request);
    if (result.error) {
-      throw result.error;
+      throw new ResponseError(400, result.error.message);
    } else {
       return result.value;
    }
