@@ -13,7 +13,7 @@ echo "Go to backend folder..."
 cd ~/app/contact-api-node-mongodb
 
 echo "Installing dependencies 🛠"
-pnpm install
+npm install
 
 echo "Restart pm2 service 🔥"
 pm2 restart deploy.json

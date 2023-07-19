@@ -16,9 +16,9 @@ jobs:
            with:
               node-version: 18
          - name: Installing Dependencies
-           run: pnpm install
+           run: npm install
          - name: Testing the app
-           run: pnpm test
+           run: npm test
    Deploy:
       needs: [build-check-backend]
       runs-on: ubuntu-latest
