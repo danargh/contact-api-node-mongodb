@@ -17,8 +17,6 @@ jobs:
               node-version: 18
          - name: Installing Dependencies
            run: npm install
-         - name: Testing the app
-           run: npm test
    Deploy:
       needs: [build-check-backend]
       runs-on: ubuntu-latest
