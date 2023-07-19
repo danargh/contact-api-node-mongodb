@@ -1,0 +1,8 @@
+{
+   "apps": [
+      {
+         "name": "Contact API node mongodb",
+         "script": "pnpm run start"
+      }
+   ]
+}
